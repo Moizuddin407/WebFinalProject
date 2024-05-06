@@ -3,6 +3,7 @@ import Navbar from '../Navbar';
 
 const API_BASE = 'http://localhost:4007/mentor';
 
+
 const TableMentor = () => {
   const [items, setItems] = useState([]);
 
@@ -19,7 +20,6 @@ const TableMentor = () => {
 
   return (
     <>
-      <Navbar />
       <table className="table custom-width-table">
         <thead>
           <tr>

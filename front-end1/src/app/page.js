@@ -11,6 +11,7 @@ import AddContribution from "./components/Management/AddContribution";
 
 import Add from "./components/Society/Add";
 
+import ApprovalTable from "./components/Mentor/Approval";
 
 
 // Give server.js port and route.
@@ -48,7 +49,9 @@ export default function Home() {
       
       {/* <Add/> */}
 
-      <Society/>
+      {/* <Society/> */}
+
+      <ApprovalTable/>
 
       {/* <Router>
 

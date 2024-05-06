@@ -10,6 +10,9 @@ const MentorSchema = new Schema({
     },
     Society: {
         type: String
+    },
+    Status: {
+        type: String
     }
 });
 
