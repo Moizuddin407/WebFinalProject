@@ -289,9 +289,10 @@ p {
 
 
 
+/* Navbar */
 
 
-/* .navbar {
+.navbar {
   background-color: transparent;
   position: fixed;
   top: 0;
@@ -322,4 +323,106 @@ p {
 
 .nav-item a:hover {
   transform: scale(1.1);  
-} */
+}
+
+
+
+/* Signin */
+
+.heading {
+  text-align: center;
+  font-family: 'Your Cursive Font', cursive;
+  text-transform: uppercase;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.login-btn,
+.signup-btn {
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+  color: blue;
+}
+
+.login-btn {
+  background-color: #f0f0f0;
+}
+
+.signup-btn {
+  background-color: #ffcc00;
+}
+
+.linkxxx {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.divider {
+  width: 50%;
+  border: none;
+  border-top: 3px solid #b0a2a2;
+  margin: 20px auto;
+}
+
+
+/* Add Society */
+/* Add.css */
+
+/* Container styles */
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label styles */
+label {
+  margin-bottom: 8px;
+}
+
+/* Input styles */
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Button styles */
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Optional: Add additional styles as needed */

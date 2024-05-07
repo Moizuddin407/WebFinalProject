@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from '../Navbar';
-
-const API_BASE = 'http://localhost:4007/mentor';
+import NavbarMentor from './NavbarMentor';
+const API_BASE = 'http://localhost:4006/society';
 
 
 const TableMentor = () => {
@@ -20,6 +19,7 @@ const TableMentor = () => {
 
   return (
     <>
+    <NavbarMentor/>
       <table className="table custom-width-table">
         <thead>
           <tr>

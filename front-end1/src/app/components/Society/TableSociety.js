@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import NavbarSociety from './NavbarSociety';
 
 const API_BASE = 'http://localhost:4006/society';
 
@@ -22,13 +23,13 @@ const TableSociety = () => {
     const contributions = itemToUpdate.Contributions;
 
     const society = window.prompt("Enter Society:", itemToUpdate.Society);
-    if (society === null) return; // If user cancels, do nothing
+    if (society === null) return;
 
     const mentor = window.prompt("Enter Mentor:", itemToUpdate.Mentor);
-    if (mentor === null) return; // If user cancels, do nothing
+    if (mentor === null) return;
 
     const note = window.prompt("Enter Note:", itemToUpdate.Note);
-    if (note === null) return; // If user cancels, do nothing
+    if (note === null) return;
 
     const updatedItem = {
       Society: society,
@@ -74,6 +75,8 @@ const TableSociety = () => {
 
   return (
     <>
+    <NavbarSociety/>
+    
       <table className="table custom-width-table">
         <thead>
           <tr>
@@ -96,8 +99,8 @@ const TableSociety = () => {
               <td>{item.Mentor}</td>
               <td>{item.Status}</td>
               <td>{item.Note}</td>
-              <td><button onClick={() => handleUpdate(item.id)}>Update</button></td>
-              <td><button onClick={() => handleDelete(item.id)}>Delete</button></td>
+              <td><button className="signup-btn" onClick={() => handleUpdate(item.id)}>Update</button></td>
+              <td><button className="login-btn" onClick={() => handleDelete(item.id)}>Delete</button></td>
             </tr>
           ))}
         </tbody>

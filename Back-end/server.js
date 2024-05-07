@@ -15,6 +15,7 @@ credentials:true}));
 // Imp. Use this.
 // Bycrypt JWT. 
 
+
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017', {
     dbName: 'ContributionProject',

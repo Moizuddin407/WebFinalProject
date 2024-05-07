@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import NavbarMentor from './NavbarMentor';
 
 const API_BASE = 'http://localhost:4007/mentor';
 const SOCIETY_API_BASE = 'http://localhost:4006/society';
@@ -43,6 +44,7 @@ const ApprovalTable = () => {
 
   return (
     <>
+    <NavbarMentor/>
       <table className="table custom-width-table">
         <thead>
           <tr>
@@ -60,10 +62,10 @@ const ApprovalTable = () => {
               <td>{item.Points}</td>
               <td>{item.Society}</td>
               <td>
-                <button onClick={() => handleApprove(item.id)}>Approve</button>
+                <button className='login-btn' onClick={() => handleApprove(item.id)}>Approve</button>
               </td>
               <td>
-                <button onClick={() => handleDeny(item.id)}>Deny</button>
+                <button className='signup-btn' onClick={() => handleDeny(item.id)}>Deny</button>
               </td>
             </tr>
           ))}

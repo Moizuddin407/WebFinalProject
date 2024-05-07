@@ -14,6 +14,8 @@ import Add from "./components/Society/Add";
 import ApprovalTable from "./components/Mentor/Approval";
 
 
+
+
 // Give server.js port and route.
 const API_BASE = 'http://localhost:4003/users';
 
@@ -43,31 +45,29 @@ export default function Home() {
   return (
     <>
 
-      {/* <Mainpage/>  */}
 
-      {/* <Signin/> */}
-      
-      {/* <Add/> */}
-
-      {/* <Society/> */}
-
-      <ApprovalTable/>
-
-      {/* <Router>
+      <Router>
 
         <Routes>
           <Route path="/" element={<Signin/>}/>
         </Routes>
 
         <Routes>
-          <Route path="/Management" element={<Mentor/>}/>
+          <Route path="/Management" element={<Mainpage/>}/>
         </Routes>
+
+        <Routes>
+          <Route path="/Approval" element={<ApprovalTable/>}/>
+        </Routes>
+
+        <Routes>
+          <Route path="/Addstd" element={<Add/>}/>
+        </Routes>
+
         
         <Routes>
           <Route path="/AddContributions" element={<AddContribution/>}/>
         </Routes>
-
-
 
         <Routes>
           <Route path="/society" element={<Society/>}/>
@@ -85,7 +85,7 @@ export default function Home() {
           <Route path="/Mainpage" element={<Mainpage setItems={setItems} items={items} />} />
         </Routes>
 
-      </Router>  */}
+      </Router>
     </>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes,Link,useNavigate } from 'react-router-dom';
+import NavbarManagement from './NavbarManagement';
 
 import { useRouter } from 'next/router';
 
@@ -42,13 +43,13 @@ export default function AddContribution() {
   };
   
   return (
+    
     <div class="Main-Container">
-      <div class="Image-left">
-        <h1>Welcome to Contribution system</h1>
-      </div>
-
+      <NavbarManagement/>
+      
       <div class="Signup-page">
         <div class="container Signup-Form-Design">
+        <h1 className='heading'>Add New Contribution</h1>
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="contribution" placeholder="Contribution" value={Contributions} onChange={handleContributionChange}/>
             <label for="contribution">Contribution</label>
@@ -59,11 +60,8 @@ export default function AddContribution() {
             <label for="points">Points</label>
           </div>
 
-          <button onClick={handleSubmit}>Send</button>
+          <button className='login-btn' onClick={handleSubmit}>Send</button>
 
-          <button className="button">
-              <Link href="/Management">yo</Link>
-          </button>
         </div>
       </div>
     </div>

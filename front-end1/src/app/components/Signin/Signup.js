@@ -42,7 +42,6 @@ export default function Signup() {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // POST data to the API
     try {
       const response = await fetch(API_BASE, {
         method: 'POST',
@@ -66,52 +65,48 @@ export default function Signup() {
   
 
   return (
-
-      <div class="Main-Container">
-        <div class="Image-left">
-          <h1>Welcome to Contribution system</h1>
-        </div>
-
-        <div class="Signup-page">
+    <div class="Main-Container">
+      <div class="Image-left">
+        <form class="Signup-page">
+  
           <div class="container Signup-Form-Design">
-
+          <h1>Hello There! Sign up</h1>
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="fname" placeholder="First Name" value={FirstName} onChange={handleFirstNameChange}/>
               <label for="fname">First Name</label>
             </div>
-
+  
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="lname" placeholder="Last Name" value={LastName} onChange={handleLastNameChange}/>
               <label for="lname">Last Name</label>
             </div>
-
+  
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="id" placeholder="ID" value={emailid} onChange={handleEmailIdChange}/>
               <label for="id">ID</label>
             </div>
-
+  
             <div class="form-floating mb-3">
               <input type="password" class="form-control" id="password" placeholder="password" value={password} onChange={handlepasswordChange}/>
               <label for="password">password</label>
             </div>
-
+  
             <div class="form-floating mb-3">
               <input type="tel" id="phone" class="form-control" name="phone" placeholder="Phone" value={phoneno} onChange={handlePhoneChange} pattern="\+[0-9]{2}-[0-9]{3}-[0-9]{6}"  />
               <label for="phone">Phone No:</label>
             </div>
-
+  
             <div class="form-floating mb-3">
               <input type="text" id="role" class="form-control" name="role" placeholder="Role" value={role} onChange={handleRoleChange} />
               <label for="phone">Role: </label>
             </div>
-
-            <button onClick={handleSubmit}>Send</button>
+  
+            <button class="signup-btn" onClick={handleSubmit}>Send</button>
           </div>
-        </div>
+        </form>
       </div>
-
-
-
+    </div>
   );
+  
 }
 

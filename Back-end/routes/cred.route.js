@@ -71,6 +71,7 @@ router.patch('/:id', async (req, res) => {
 
 // Signin route
 router.post('/signin', async (req, res) => {
+    let token = "";
     try {
         const { emailid, password } = req.body;
         const user = await User.findOne({ emailid });
@@ -81,10 +82,13 @@ router.post('/signin', async (req, res) => {
 
         const match = await bcrypt.compare(password, user.password);
         if (match) {
-            // Passwords match, authentication successful
-            res.json({ message: 'Authentication successful', role: user.role });
+            
+            token = jwt.sign({ _id: user._id }, "Nwesd43jnf3!s@@");
+            console.log("Token:",token);
+
+            res.json({ message: 'Authentication successful', role: user.role, token: token });
+            
         } else {
-            // Passwords don't match, authentication failed
             res.status(401).json({ message: 'Invalid email or password' });
         }
     } catch (error) {
@@ -92,7 +96,6 @@ router.post('/signin', async (req, res) => {
         res.status(500).send("Server Error. Signin");
     }
 });
-
 
 // For Gettting Mentors:
 router.get('/mentors', async (req, res) => {

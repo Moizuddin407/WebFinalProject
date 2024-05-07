@@ -1,3 +1,5 @@
+// import Navbar from '../Navbar';
+import NavbarManagement from './NavbarManagement';
 import SidebarManagement from './SidebarManagement';
 import React, { useState, useEffect } from 'react';
 
@@ -94,7 +96,9 @@ const Table = () => {
   return (
     <>
       
-      <SidebarManagement/>
+      {/* <SidebarManagement/> */}
+      {/* <Navbar/> */}
+      <NavbarManagement/>
       <div>
           <table className="table">
             <thead>
@@ -110,8 +114,8 @@ const Table = () => {
                 <tr key={index}>
                   <td>{item.Contributions}</td>
                   <td>{item.Points}</td>
-                  <td><button onClick={() => handleUpdate(item.id)}>Update</button></td>
-                  <td><button onClick={() => handleDelete(item.id)}>Delete</button></td>
+                  <td><button className="signup-btn" onClick={() => handleUpdate(item.id)}>Update</button></td>
+                  <td><button className="login-btn" onClick={() => handleDelete(item.id)}>Delete</button></td>
                 </tr>
               ))}
             </tbody>
